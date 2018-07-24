@@ -1,0 +1,2 @@
+I initially just placed a println in the test block so that I could find where the test block is output. This allowed me to spot the error in the test and I added an "=" sign to the code.
+For a better solution, I edited the formatter in the build.xml and made usefile="false" so that all information is printed to the Travis console
