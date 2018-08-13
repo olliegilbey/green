@@ -68,6 +68,7 @@ public class SATCanonizerTest {
 		assertEquals(Instance.class, result.getClass());
 		Instance j = (Instance) result;
 		finalCheck(j.getExpression().toString(), expected);
+		System.out.println("Expression " + expression.toString());
 	}
 
 	@Test
