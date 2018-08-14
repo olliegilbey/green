@@ -76,11 +76,27 @@ public class ConstantPropagation extends BasicService{
     }
     return null;
   }
-
+// To first visit and find a list of variables and map them to their constant values
   private static class VariableVisitor extends Visitor {
 
-  }
+    public getVars() {
+    while(!stack.isEmpty()) {
+      Expression current = stack.pop();
+      if (current instanceof Operation) {
+        Operation.Operator op = ((Operation)x).getOperator();
+        //if equals
+        if (op.equals(EQ)) {
+          Expression r = stack.pop();
+          Expression l = stack.pop();
+          if ((l instanceof IntVariable)&&(r instanceof IntConstant)) {
 
+          }
+        }
+      }
+    }
+  }
+  }
+// To visit and propagate constants through the equation
   private static class PropagatingVisitor extends Visitor {
 
     private Stack<Expression> stack;
